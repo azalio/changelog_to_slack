@@ -87,7 +87,6 @@ def store_log(name, version):
 
     with open(database, 'wb') as fh:
         data[name] = version_list
-        print(data)
         umsgpack.pack(data, fh)
 
 
