@@ -124,7 +124,7 @@ def linux_kernel():
 
     :return: dict or False
     """
-    url = 'https://www.kernel.org/releases.json'
+    url = config.get('urls', 'linux_kernel')
     content = get(url)
     if content:
         json_content = content.json()
